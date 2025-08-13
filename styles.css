@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* Animación suave y lenta */
+/* Animación suave de aparición */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -26,7 +26,7 @@ body {
   line-height: 1.6;
 }
 
-/* Contenedor sin tarjeta flotante */
+/* Contenedor sin efecto de tarjeta flotante */
 .container {
   max-width: 680px;
   width: 100%;
@@ -103,7 +103,7 @@ body {
   border-radius: 12px;
 }
 
-/* Botón 1: Registro de Asistencia */
+/* Botón: Registro de Asistencia */
 .btn-register {
   display: block;
   width: 100%;
@@ -127,37 +127,13 @@ body {
   background: linear-gradient(to right, #164d96, #266eb2);
 }
 
-/* Botón 2: Fiscalización */
-.btn-fiscalizacion {
-  display: block;
-  width: 100%;
-  padding: 18px;
-  margin: 24px 0;
-  background: linear-gradient(to right, #2c3e50, #3e5a7a);
-  color: white;
-  text-decoration: none;
-  border-radius: 12px;
-  font-size: 17px;
-  font-weight: 600;
-  transition: all 0.4s ease;
-  box-shadow: 0 4px 10px rgba(44, 62, 80, 0.15);
-  opacity: 0;
-  animation: fadeIn 1.3s ease-out 2.2s forwards;
-}
-
-.btn-fiscalizacion:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(44, 62, 80, 0.25);
-  background: linear-gradient(to right, #1a252f, #2c3e50);
-}
-
 /* Sección del documento */
 .document-section {
   margin: 40px 0 20px;
   text-align: left;
   color: #444;
   opacity: 0;
-  animation: fadeIn 1.3s ease-out 2.6s forwards;
+  animation: fadeIn 1.3s ease-out 2.2s forwards;
 }
 
 .document-section h2 {
@@ -219,7 +195,7 @@ body {
   transition: all 0.4s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
-  animation: fadeIn 1.2s ease-out 3.0s forwards;
+  animation: fadeIn 1.2s ease-out 2.6s forwards;
   text-align: center;
 }
 
@@ -234,7 +210,7 @@ body {
   margin-top: 40px;
   text-align: center;
   opacity: 0;
-  animation: fadeIn 1.3s ease-out 3.4s forwards;
+  animation: fadeIn 1.3s ease-out 3.0s forwards;
 }
 
 .links h2 {
@@ -273,11 +249,12 @@ body {
   opacity: 0;
 }
 
-.links .btn:nth-child(2) { animation: fadeIn 1.2s ease-out 3.6s forwards; }
-.links .btn:nth-child(3) { animation: fadeIn 1.2s ease-out 3.8s forwards; }
-.links .btn:nth-child(4) { animation: fadeIn 1.2s ease-out 4.0s forwards; }
-.links .btn:nth-child(5) { animation: fadeIn 1.2s ease-out 4.2s forwards; }
-.links .btn:nth-child(6) { animation: fadeIn 1.2s ease-out 4.4s forwards; }
+/* Animación escalonada para enlaces */
+.links .btn:nth-child(2) { animation: fadeIn 1.2s ease-out 3.2s forwards; }
+.links .btn:nth-child(3) { animation: fadeIn 1.2s ease-out 3.4s forwards; }
+.links .btn:nth-child(4) { animation: fadeIn 1.2s ease-out 3.6s forwards; }
+.links .btn:nth-child(5) { animation: fadeIn 1.2s ease-out 3.8s forwards; }
+.links .btn:nth-child(6) { animation: fadeIn 1.2s ease-out 4.0s forwards; }
 
 .btn:hover {
   background-color: #f5f5f5;
@@ -314,7 +291,6 @@ body {
   }
 
   .btn-register,
-  .btn-fiscalizacion,
   .btn-download {
     font-size: 16px;
     padding: 16px;
