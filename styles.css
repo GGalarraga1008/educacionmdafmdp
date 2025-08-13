@@ -6,13 +6,14 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f8f9fc;
+  background: linear-gradient(135deg, #f9f9ff 0%, #eef2f7 50%, #f8fdff 100%);
   color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+  line-height: 1.6;
 }
 
 .container {
@@ -20,40 +21,43 @@ body {
   max-width: 600px;
   width: 100%;
   background: white;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 1px 10px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(26, 95, 180, 0.1);
 }
 
-/* Logo arriba del título */
+/* Logo arriba */
 .logo {
   width: 180px;
   height: auto;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 24px auto;
   display: block;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(26, 95, 180, 0.15);
+  transition: transform 0.3s ease;
 }
 
-/* Títulos centrados debajo del logo */
-.header {
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 0 15px;
+.logo:hover {
+  transform: scale(1.03);
 }
 
+/* Títulos */
 .header h1 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
-  color: #1a5fb4; /* Azul institucional */
-  margin-bottom: 8px;
+  color: #1a5fb4;
+  margin-bottom: 10px;
   line-height: 1.4;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
 .header h2 {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 600;
   color: #2c3e50;
   margin-bottom: 10px;
@@ -61,32 +65,33 @@ body {
 
 .location {
   font-size: 16px;
-  color: #555;
-  margin-bottom: 25px;
+  color: #666;
+  margin-bottom: 30px;
   font-style: italic;
   font-weight: 500;
 }
 
-/* Banner destacado */
+/* Banner */
 .banner {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  border: 1px solid #e0e6ed;
 }
 
 .banner img {
   width: 100%;
   height: auto;
   max-width: 100%;
-  max-height: 480px;
+  max-height: 500px;
   object-fit: contain;
-  border-radius: 15px;
   display: block;
+  border-radius: 17px;
 }
 
 /* Botón 1: Registro de Asistencia */
@@ -94,21 +99,39 @@ body {
   display: block;
   width: 100%;
   padding: 18px;
-  margin: 20px 0;
-  background-color: #1a5fb4;
+  margin: 24px 0;
+  background: linear-gradient(to right, #1a5fb4, #2a7fd9);
   color: white;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 14px;
   font-size: 17px;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(26, 95, 180, 0.3);
+  box-shadow: 0 6px 14px rgba(26, 95, 180, 0.3);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.btn-register::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+  pointer-events: none;
 }
 
 .btn-register:hover {
-  background-color: #164d96;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(26, 95, 180, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(26, 95, 180, 0.4);
+}
+
+.btn-register:hover::before {
+  left: 100%;
 }
 
 /* Botón 2: Fiscalización */
@@ -116,55 +139,73 @@ body {
   display: block;
   width: 100%;
   padding: 18px;
-  margin: 20px 0;
-  background-color: #2c3e50;
+  margin: 24px 0;
+  background: linear-gradient(to right, #2c3e50, #3e5a7a);
   color: white;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 14px;
   font-size: 17px;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(44, 62, 80, 0.3);
+  box-shadow: 0 6px 14px rgba(44, 62, 80, 0.3);
+  text-align: center;
 }
 
 .btn-fiscalizacion:hover {
-  background-color: #1a252f;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(44, 62, 80, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(44, 62, 80, 0.4);
+  background: linear-gradient(to right, #1a252f, #2c3e50);
 }
 
-/* Enlaces normales */
+/* Sección de enlaces */
 .links h2 {
   font-size: 22px;
-  margin: 30px 0 20px;
+  margin: 36px 0 20px;
   color: #2c3e50;
   font-weight: 600;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.links h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #1a5fb4;
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
 
 .btn {
   display: block;
   width: 100%;
   padding: 15px;
-  margin-bottom: 12px;
-  background-color: #6a5acd;
-  color: white;
+  margin-bottom: 14px;
+  background-color: #f0f4f8;
+  color: #2c3e50;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
+  border: 1px solid #dce4ec;
 }
 
 .btn:hover {
-  background-color: #5a4abc;
+  background-color: #e0e8f0;
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(106, 87, 205, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-color: #1a5fb4;
 }
 
-/* Responsive para móviles */
+/* Responsive */
 @media (max-width: 480px) {
   .container {
-    padding: 25px 20px;
+    padding: 30px 20px;
+    border-radius: 20px;
   }
 
   .logo {
@@ -176,7 +217,7 @@ body {
   }
 
   .header h2 {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .location {
@@ -194,6 +235,7 @@ body {
   }
 
   .btn {
-    font-size: 16px;
+    font-size: 15px;
+    padding: 14px;
   }
 }
