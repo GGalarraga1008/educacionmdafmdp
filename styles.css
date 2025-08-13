@@ -107,8 +107,8 @@ body {
 .form-section {
   margin: 40px 0;
   text-align: left;
-  opacity: 0;
-  animation: fadeIn 1.3s ease-out 1.8s forwards;
+  opacity: 1;
+  animation: none;
 }
 
 .form-section h2 {
@@ -199,8 +199,8 @@ body {
   margin: 40px 0 20px;
   text-align: left;
   color: #444;
-  opacity: 0;
-  animation: fadeIn 1.3s ease-out 2.6s forwards;
+  opacity: 1;
+  animation: none;
 }
 
 .document-section h2 {
@@ -261,8 +261,8 @@ body {
   font-weight: 600;
   transition: all 0.4s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeIn 1.2s ease-out 3.0s forwards;
+  opacity: 1;
+  animation: none;
   text-align: center;
 }
 
@@ -272,12 +272,38 @@ body {
   background: linear-gradient(to right, #444, #666);
 }
 
+/* Botón de fiscalización */
+.btn-fiscalizar {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  margin: 30px 0;
+  background: linear-gradient(to right, #d94f43, #f56565);
+  color: white;
+  text-decoration: none;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 16px rgba(217, 79, 67, 0.3);
+  opacity: 1;
+  animation: fadeIn 1.2s ease-out 3.2s forwards;
+  text-align: center;
+}
+
+.btn-fiscalizar:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(217, 79, 67, 0.4);
+  background: linear-gradient(to right, #c53d34, #e55454);
+}
+
 /* Sección de enlaces */
 .links {
   margin-top: 40px;
   text-align: center;
-  opacity: 0;
-  animation: fadeIn 1.3s ease-out 3.4s forwards;
+  opacity: 1;
+  animation: none;
 }
 
 .links h2 {
@@ -313,15 +339,9 @@ body {
   font-weight: 600;
   transition: all 0.4s ease;
   border: 1px solid #e8e8e8;
-  opacity: 0;
+  opacity: 1 !important;
+  animation: none !important;
 }
-
-/* Animación escalonada para enlaces */
-.links .btn:nth-child(2) { animation: fadeIn 1.2s ease-out 3.6s forwards; }
-.links .btn:nth-child(3) { animation: fadeIn 1.2s ease-out 3.8s forwards; }
-.links .btn:nth-child(4) { animation: fadeIn 1.2s ease-out 4.0s forwards; }
-.links .btn:nth-child(5) { animation: fadeIn 1.2s ease-out 4.2s forwards; }
-.links .btn:nth-child(6) { animation: fadeIn 1.2s ease-out 4.4s forwards; }
 
 .btn:hover {
   background-color: #f5f5f5;
@@ -363,7 +383,8 @@ body {
   }
 
   .registration-form .btn-register,
-  .btn-download {
+  .btn-download,
+  .btn-fiscalizar {
     font-size: 16px;
     padding: 16px;
     border-radius: 10px;
@@ -374,15 +395,4 @@ body {
     padding: 14px;
     border-radius: 8px;
   }
-}
-/* Botón de YouTube destacado */
-.youtube-link {
-  background-color: #CC0000 !important;
-  border: 2px solid #990000 !important;
-}
-
-.youtube-link:hover {
-  background-color: #bb0000 !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 4px 10px rgba(204, 0, 0, 0.3) !important;
 }
