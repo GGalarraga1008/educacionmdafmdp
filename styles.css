@@ -16,7 +16,7 @@
   }
 }
 
-/* Fondo degradado: blanco → gris claro */
+/* Fondo degradado: blanco → gris muy claro */
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #ffffff 0%, #f4f4f4 100%);
@@ -26,7 +26,7 @@ body {
   line-height: 1.6;
 }
 
-/* Contenedor sin efecto de tarjeta flotante */
+/* Contenedor principal sin efecto de tarjeta */
 .container {
   max-width: 680px;
   width: 100%;
@@ -84,7 +84,7 @@ body {
   animation: fadeIn 1.3s ease-out 1.2s forwards;
 }
 
-/* Banner */
+/* Banner del evento */
 .banner {
   margin: 25px 0;
   overflow: hidden;
@@ -103,217 +103,12 @@ body {
   border-radius: 12px;
 }
 
-/* Botón: Registro de Asistencia */
-.btn-register {
-  display: block;
-  width: 100%;
-  padding: 18px;
-  margin: 24px 0;
-  background: linear-gradient(to right, #1a5fb4, #2a7fd9);
-  color: white;
-  text-decoration: none;
-  border-radius: 12px;
-  font-size: 17px;
-  font-weight: 600;
-  transition: all 0.4s ease;
-  box-shadow: 0 4px 10px rgba(26, 95, 180, 0.15);
-  opacity: 0;
-  animation: fadeIn 1.3s ease-out 1.8s forwards;
-}
-
-.btn-register:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(26, 95, 180, 0.25);
-  background: linear-gradient(to right, #164d96, #266eb2);
-}
-
-/* Sección del documento */
-.document-section {
-  margin: 40px 0 20px;
-  text-align: left;
-  color: #444;
-  opacity: 0;
-  animation: fadeIn 1.3s ease-out 2.2s forwards;
-}
-
-.document-section h2 {
-  font-size: 22px;
-  color: #1a5fb4;
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.document-section .subtitle {
-  font-size: 16px;
-  color: #666;
-  font-style: italic;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.document-content {
-  font-size: 15px;
-  line-height: 1.7;
-  padding: 20px;
-  background: #f9f9fb;
-  border-radius: 12px;
-  border: 1px solid #e0e0e0;
-}
-
-.document-content h3 {
-  font-size: 17px;
-  color: #2c3e50;
-  margin: 18px 0 10px;
-}
-
-.document-content p {
-  margin-bottom: 14px;
-}
-
-.document-content .quote {
-  text-align: center;
-  font-style: italic;
-  color: #1a5fb4;
-  font-weight: 600;
-  margin-top: 20px;
-  padding: 10px;
-  font-size: 16px;
-}
-
-/* Botón de descarga */
-.btn-download {
-  display: block;
-  width: 100%;
-  padding: 16px;
-  margin: 30px 0;
-  background: linear-gradient(to right, #555, #777);
-  color: white;
-  text-decoration: none;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all 0.4s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeIn 1.2s ease-out 2.6s forwards;
-  text-align: center;
-}
-
-.btn-download:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(to right, #444, #666);
-}
-
-/* Sección de enlaces */
-.links {
-  margin-top: 40px;
-  text-align: center;
-  opacity: 0;
-  animation: fadeIn 1.3s ease-out 3.0s forwards;
-}
-
-.links h2 {
-  font-size: 22px;
-  margin-bottom: 20px;
-  color: #2c3e50;
-  font-weight: 600;
-  position: relative;
-  display: inline-block;
-}
-
-.links h2::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #1a5fb4;
-  margin: 8px auto 0;
-  border-radius: 2px;
-}
-
-/* Enlaces */
-.btn {
-  display: block;
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 12px;
-  background-color: #fdfdfd;
-  color: #2c3e50;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all 0.4s ease;
-  border: 1px solid #e8e8e8;
-  opacity: 0;
-}
-
-/* Animación escalonada para enlaces */
-.links .btn:nth-child(2) { animation: fadeIn 1.2s ease-out 3.2s forwards; }
-.links .btn:nth-child(3) { animation: fadeIn 1.2s ease-out 3.4s forwards; }
-.links .btn:nth-child(4) { animation: fadeIn 1.2s ease-out 3.6s forwards; }
-.links .btn:nth-child(5) { animation: fadeIn 1.2s ease-out 3.8s forwards; }
-.links .btn:nth-child(6) { animation: fadeIn 1.2s ease-out 4.0s forwards; }
-
-.btn:hover {
-  background-color: #f5f5f5;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  border-color: #1a5fb4;
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  .container {
-    padding: 0;
-  }
-
-  .logo {
-    width: 150px;
-  }
-
-  .header h1 {
-    font-size: 20px;
-  }
-
-  .header h2 {
-    font-size: 18px;
-  }
-
-  .location {
-    font-size: 15px;
-  }
-
-  .banner img {
-    max-height: 400px;
-    border-radius: 10px;
-  }
-
-  .btn-register,
-  .btn-download {
-    font-size: 16px;
-    padding: 16px;
-    border-radius: 10px;
-  }
-
-  .document-content {
-    font-size: 14px;
-    padding: 16px;
-  }
-
-  .links .btn {
-    font-size: 15px;
-    padding: 14px;
-    border-radius: 8px;
-  }
-}
-/* Sección del formulario */
+/* Sección del formulario de registro */
 .form-section {
   margin: 40px 0;
   text-align: left;
   opacity: 0;
-  animation: fadeIn 1.3s ease-out 2.2s forwards;
+  animation: fadeIn 1.3s ease-out 1.8s forwards;
 }
 
 .form-section h2 {
@@ -331,7 +126,7 @@ body {
   text-align: center;
 }
 
-/* Formulario */
+/* Formulario integrado */
 .registration-form {
   max-width: 500px;
   margin: 0 auto;
@@ -381,13 +176,202 @@ body {
   width: 100%;
   padding: 16px;
   margin: 0;
+  background: linear-gradient(to right, #1a5fb4, #2a7fd9);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
   font-size: 17px;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
   box-shadow: 0 5px 12px rgba(26, 95, 180, 0.2);
-  transition: all 0.3s ease;
 }
 
 .registration-form .btn-register:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(26, 95, 180, 0.3);
+  background: linear-gradient(to right, #164d96, #266eb2);
+}
+
+/* Sección del documento */
+.document-section {
+  margin: 40px 0 20px;
+  text-align: left;
+  color: #444;
+  opacity: 0;
+  animation: fadeIn 1.3s ease-out 2.6s forwards;
+}
+
+.document-section h2 {
+  font-size: 22px;
+  color: #1a5fb4;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.document-section .subtitle {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.document-content {
+  font-size: 15px;
+  line-height: 1.7;
+  padding: 20px;
+  background: #f9f9fb;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+.document-content h3 {
+  font-size: 17px;
+  color: #2c3e50;
+  margin: 18px 0 10px;
+}
+
+.document-content p {
+  margin-bottom: 14px;
+}
+
+.document-content .quote {
+  text-align: center;
+  font-style: italic;
+  color: #1a5fb4;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Botón de descarga del PDF */
+.btn-download {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin: 30px 0;
+  background: linear-gradient(to right, #555, #777);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out 3.0s forwards;
+  text-align: center;
+}
+
+.btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, #444, #666);
+}
+
+/* Sección de enlaces */
+.links {
+  margin-top: 40px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.3s ease-out 3.4s forwards;
+}
+
+.links h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.links h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #1a5fb4;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Enlaces secundarios */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 12px;
+  background-color: #fdfdfd;
+  color: #2c3e50;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  border: 1px solid #e8e8e8;
+  opacity: 0;
+}
+
+/* Animación escalonada para enlaces */
+.links .btn:nth-child(2) { animation: fadeIn 1.2s ease-out 3.6s forwards; }
+.links .btn:nth-child(3) { animation: fadeIn 1.2s ease-out 3.8s forwards; }
+.links .btn:nth-child(4) { animation: fadeIn 1.2s ease-out 4.0s forwards; }
+.links .btn:nth-child(5) { animation: fadeIn 1.2s ease-out 4.2s forwards; }
+.links .btn:nth-child(6) { animation: fadeIn 1.2s ease-out 4.4s forwards; }
+
+.btn:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-color: #1a5fb4;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+
+  .location {
+    font-size: 15px;
+  }
+
+  .banner img {
+    max-height: 400px;
+    border-radius: 10px;
+  }
+
+  .registration-form,
+  .document-content {
+    padding: 20px;
+  }
+
+  .registration-form .btn-register,
+  .btn-download {
+    font-size: 16px;
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .links .btn {
+    font-size: 15px;
+    padding: 14px;
+    border-radius: 8px;
+  }
 }
