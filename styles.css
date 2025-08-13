@@ -308,3 +308,86 @@ body {
     border-radius: 8px;
   }
 }
+/* Sección del formulario */
+.form-section {
+  margin: 40px 0;
+  text-align: left;
+  opacity: 0;
+  animation: fadeIn 1.3s ease-out 2.2s forwards;
+}
+
+.form-section h2 {
+  font-size: 22px;
+  color: #1a5fb4;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.form-section .subtitle {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Formulario */
+.registration-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #f9f9fb;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e0e0e0;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #1a5fb4;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Botón del formulario */
+.registration-form .btn-register {
+  width: 100%;
+  padding: 16px;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  box-shadow: 0 5px 12px rgba(26, 95, 180, 0.2);
+  transition: all 0.3s ease;
+}
+
+.registration-form .btn-register:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(26, 95, 180, 0.3);
+}
