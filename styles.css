@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 
-/* Animaciones sutiles */
+/* Animación de aparición más lenta y suave */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
@@ -26,21 +26,18 @@ body {
   line-height: 1.6;
 }
 
-/* Contenedor: ahora se integra con el fondo, sin bordes ni sombras fuertes */
+/* Contenedor principal con animación más lenta */
 .container {
   max-width: 680px;
   width: 100%;
   margin: 0 auto;
   padding: 30px;
   text-align: center;
-  /* Sin fondo blanco completo, ligeramente translúcido para integrarse */
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.96);
   border-radius: 20px;
-  /* Sombra muy suave, casi imperceptible */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-  /* Aparece con animación */
   opacity: 0;
-  animation: fadeIn 0.8s ease forwards;
+  animation: fadeIn 1.4s ease-out forwards;
 }
 
 /* Logo */
@@ -52,15 +49,15 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   opacity: 0;
-  animation: fadeIn 0.7s ease 0.3s forwards;
+  animation: fadeIn 1.2s ease-out 0.4s forwards;
 }
 
 .logo:hover {
   transform: scale(1.02);
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
-/* Títulos */
+/* Títulos con entrada más pausada */
 .header h1 {
   font-size: 24px;
   font-weight: 700;
@@ -70,7 +67,7 @@ body {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   opacity: 0;
-  animation: fadeIn 0.7s ease 0.4s forwards;
+  animation: fadeIn 1.2s ease-out 0.6s forwards;
 }
 
 .header h2 {
@@ -79,7 +76,7 @@ body {
   color: #2c3e50;
   margin-bottom: 10px;
   opacity: 0;
-  animation: fadeIn 0.7s ease 0.5s forwards;
+  animation: fadeIn 1.2s ease-out 0.9s forwards;
 }
 
 .location {
@@ -89,17 +86,17 @@ body {
   font-style: italic;
   font-weight: 500;
   opacity: 0;
-  animation: fadeIn 0.7s ease 0.6s forwards;
+  animation: fadeIn 1.2s ease-out 1.2s forwards;
 }
 
-/* Banner: integrado, sin efecto de "caja" */
+/* Banner */
 .banner {
   margin: 25px 0;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   opacity: 0;
-  animation: fadeIn 0.8s ease 0.7s forwards;
+  animation: fadeIn 1.3s ease-out 1.5s forwards;
 }
 
 .banner img {
@@ -123,10 +120,10 @@ body {
   border-radius: 14px;
   font-size: 17px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   box-shadow: 0 5px 12px rgba(26, 95, 180, 0.2);
   opacity: 0;
-  animation: fadeIn 0.7s ease 0.9s forwards;
+  animation: fadeIn 1.2s ease-out 1.8s forwards;
 }
 
 .btn-register:hover {
@@ -147,10 +144,10 @@ body {
   border-radius: 14px;
   font-size: 17px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   box-shadow: 0 5px 12px rgba(44, 62, 80, 0.2);
   opacity: 0;
-  animation: fadeIn 0.7s ease 1.1s forwards;
+  animation: fadeIn 1.2s ease-out 2.2s forwards;
 }
 
 .btn-fiscalizacion:hover {
@@ -164,7 +161,7 @@ body {
   margin-top: 30px;
   text-align: center;
   opacity: 0;
-  animation: fadeIn 0.7s ease 1.3s forwards;
+  animation: fadeIn 1.2s ease-out 2.6s forwards;
 }
 
 .links h2 {
@@ -186,7 +183,7 @@ body {
   border-radius: 2px;
 }
 
-/* Enlaces simples */
+/* Enlaces con animación escalonada más lenta */
 .btn {
   display: block;
   width: 100%;
@@ -198,17 +195,16 @@ body {
   border-radius: 12px;
   font-size: 16px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   border: 1px solid #e0e0e0;
   opacity: 0;
 }
 
-/* Animación escalonada para enlaces */
-.links .btn:nth-child(2) { animation: fadeIn 0.6s ease 1.4s forwards; }
-.links .btn:nth-child(3) { animation: fadeIn 0.6s ease 1.5s forwards; }
-.links .btn:nth-child(4) { animation: fadeIn 0.6s ease 1.6s forwards; }
-.links .btn:nth-child(5) { animation: fadeIn 0.6s ease 1.7s forwards; }
-.links .btn:nth-child(6) { animation: fadeIn 0.6s ease 1.8s forwards; }
+.links .btn:nth-child(2) { animation: fadeIn 1.1s ease-out 2.8s forwards; }
+.links .btn:nth-child(3) { animation: fadeIn 1.1s ease-out 3.1s forwards; }
+.links .btn:nth-child(4) { animation: fadeIn 1.1s ease-out 3.4s forwards; }
+.links .btn:nth-child(5) { animation: fadeIn 1.1s ease-out 3.7s forwards; }
+.links .btn:nth-child(6) { animation: fadeIn 1.1s ease-out 4.0s forwards; }
 
 .btn:hover {
   background-color: #f0f0f0;
@@ -217,7 +213,7 @@ body {
   border-color: #1a5fb4;
 }
 
-/* Responsive mejorado */
+/* Responsive */
 @media (max-width: 480px) {
   .container {
     padding: 25px 20px;
