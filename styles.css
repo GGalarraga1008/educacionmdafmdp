@@ -5,8 +5,8 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background: #f5f7fa;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fc;
   color: #333;
   display: flex;
   justify-content: center;
@@ -25,20 +25,48 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Cabecera con título en tres líneas */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a5fb4; /* Azul institucional, acorde al logo */
+  margin-bottom: 8px;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.header h2 {
+  font-size: 19px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.location {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-weight: 500;
+}
+
 /* Logo del movimiento */
 .logo {
   width: 180px;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-  font-size: 24px;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-/* Banner vertical - AJUSTADO PARA 600x788 */
+/* Banner destacado del evento */
 .banner {
   margin-bottom: 25px;
   overflow: hidden;
@@ -54,9 +82,9 @@ header h1 {
   width: 100%;
   height: auto;
   max-width: 100%;
-  max-height: 480px; /* Ajuste ideal para no ocupar toda la pantalla */
+  max-height: 480px;
+  object-fit: contain; /* Muestra toda la imagen sin recortar */
   border-radius: 15px;
-  object-fit: contain; /* 🔑 Clave: muestra la imagen completa sin recortar */
   display: block;
 }
 
@@ -66,20 +94,20 @@ header h1 {
   width: 100%;
   padding: 18px;
   margin: 20px 0;
-  background-color: #2ecc71;
+  background-color: #1a5fb4; /* Azul principal */
   color: white;
   text-decoration: none;
   border-radius: 12px;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+  box-shadow: 0 4px 10px rgba(26, 95, 180, 0.3);
 }
 
 .btn-register:hover {
-  background-color: #27ae60;
+  background-color: #164d96;
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(46, 204, 113, 0.4);
+  box-shadow: 0 6px 15px rgba(26, 95, 180, 0.4);
 }
 
 /* Botón 2: Inscripción al Dispositivo de Fiscalización */
@@ -88,27 +116,28 @@ header h1 {
   width: 100%;
   padding: 18px;
   margin: 20px 0;
-  background-color: #3498db;
+  background-color: #2c3e50; /* Azul oscuro profesional */
   color: white;
   text-decoration: none;
   border-radius: 12px;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 4px 10px rgba(44, 62, 80, 0.3);
 }
 
 .btn-fiscalizacion:hover {
-  background-color: #2980b9;
+  background-color: #1a252f;
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+  box-shadow: 0 6px 15px rgba(44, 62, 80, 0.4);
 }
 
 /* Enlaces normales */
 .links h2 {
   font-size: 22px;
   margin: 30px 0 20px;
-  color: #555;
+  color: #2c3e50;
+  font-weight: 600;
 }
 
 .btn {
@@ -121,7 +150,7 @@ header h1 {
   text-decoration: none;
   border-radius: 10px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
@@ -137,12 +166,24 @@ header h1 {
     padding: 25px 20px;
   }
 
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header h2 {
+    font-size: 17px;
+  }
+
+  .location {
+    font-size: 15px;
+  }
+
   .logo {
     width: 150px;
   }
 
   .banner img {
-    max-height: 400px; /* Ajuste en pantallas pequeñas */
+    max-height: 400px;
   }
 
   .btn-register,
