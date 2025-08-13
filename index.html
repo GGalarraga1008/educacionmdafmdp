@@ -6,6 +6,8 @@
   <title>Movimiento Derecho al Futuro</title>
   <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Estilos -->
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -56,8 +58,13 @@
         </div>
 
         <div class="form-group">
-          <label for="comments">Comentarios o aportes (opcional)</label>
-          <textarea id="comments" name="comments" rows="3" placeholder="¿Qué te gustaría aportar al encuentro?"></textarea>
+          <label for="comments">Aportes personales (máx. 400 caracteres)</label>
+          <textarea 
+            id="comments" 
+            name="comments" 
+            rows="3" 
+            maxlength="400" 
+            placeholder="¿Qué te gustaría aportar al encuentro?"></textarea>
         </div>
 
         <button type="submit" class="btn-register">
@@ -105,16 +112,28 @@
       📥 Descargar el documento completo
     </a>
 
-   <!-- Enlaces importantes -->
-<section class="links">
-  <h2>Enlaces</h2>
-  <a href="mailto:movdafmdp@gmail.com" class="btn">✉️ Correo Electrónico</a>
-  <a href="https://www.mdpconaxel.com.ar" class="btn" target="_blank">🌐 Sitio Web</a>
-  <a href="https://instagram.com/movimientodafmdp" class="btn" target="_blank">📷 Instagram</a>
-  <a href="https://twitter.com/movdafmdp" class="btn" target="_blank">𝕏 X (Twitter)</a>
-  <a href="https://www.tiktok.com/@movdafmdp" class="btn" target="_blank">🎵 TikTok</a>
-  <a href="https://youtube.com/@MOVDAFMDP" class="btn" target="_blank">▶️ YouTube</a>
-</section>
+    <!-- Enlaces importantes -->
+    <section class="links">
+      <h2>Enlaces</h2>
+      <a href="mailto:movdafmdp@gmail.com" class="btn" target="_blank">
+        <i class="fas fa-envelope"></i> Escribinos por correo
+      </a>
+      <a href="https://www.mdpconaxel.com.ar" class="btn" target="_blank">
+        <i class="fas fa-globe"></i> Sitio Web
+      </a>
+      <a href="https://instagram.com/movimientodafmdp" class="btn" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://twitter.com/movdafmdp" class="btn" target="_blank">
+        <i class="fab fa-x-twitter"></i> Twitter
+      </a>
+      <a href="https://www.tiktok.com/@movdafmdp" class="btn" target="_blank">
+        <i class="fab fa-tiktok"></i> TikTok
+      </a>
+      <a href="https://youtube.com/@MOVDAFMDP" class="btn" target="_blank">
+        <i class="fab fa-youtube"></i> YouTube
+      </a>
+    </section>
   </div>
 
   <!-- Script: mensaje de agradecimiento tras envío -->
