@@ -1,55 +1,141 @@
-<!-- Formulario de Registro de Asistencia (integrado) -->
-<section class="form-section">
-  <h2>Registro de Asistencia al Encuentro</h2>
-  <p class="subtitle">Completá tus datos para confirmar tu participación</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movimiento Derecho al Futuro</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Cabecera -->
+    <header class="header">
+      <img src="logo.png" alt="Logo Movimiento Derecho al Futuro" class="logo" />
+      <h1>ENCUENTRO SOBRE EDUCACIÓN Y NIÑEZ</h1>
+      <h2>MOVIMIENTO DERECHO AL FUTURO</h2>
+      <p class="location">Mar del Plata - Batán</p>
+    </header>
 
-  <form action="https://formspree.io/f/YOUR-ID-HERE" method="POST" class="registration-form">
-    <div class="form-group">
-      <label for="name">Nombre y apellido *</label>
-      <input type="text" id="name" name="name" required>
+    <!-- Banner -->
+    <div class="banner">
+      <img src="banner-evento.jpg" alt="Encuentro sobre Educación y Niñez" />
     </div>
 
-    <div class="form-group">
-      <label for="email">Correo electrónico *</label>
-      <input type="email" id="email" name="email" required>
-    </div>
+    <!-- Formulario de Registro de Asistencia (integrado) -->
+    <section class="form-section">
+      <h2>Registro de Asistencia al Encuentro</h2>
+      <p class="subtitle">Completá tus datos para confirmar tu participación</p>
 
-    <div class="form-group">
-      <label for="phone">Teléfono (opcional)</label>
-      <input type="tel" id="phone" name="phone">
-    </div>
+      <form action="https://formspree.io/f/xvovqyzz" method="POST" class="registration-form">
+        <div class="form-group">
+          <label for="name">Nombre y apellido *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
 
-    <div class="form-group">
-      <label for="role">Tu rol en la comunidad educativa *</label>
-      <select id="role" name="role" required>
-        <option value="">Seleccioná una opción</option>
-        <option value="docente">Docente</option>
-        <option value="estudiante">Estudiante</option>
-        <option value="directivo">Directivo</option>
-        <option value="auxiliar">Auxiliar</option>
-        <option value="familia">Familia</option>
-        <option value="organizacion">Organización social o política</option>
-        <option value="otro">Otro</option>
-      </select>
-    </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
 
-    <div class="form-group">
-      <label for="localidad">Localidad *</label>
-      <select id="localidad" name="localidad" required>
-        <option value="">Seleccioná una opción</option>
-        <option value="mar-del-plata">Mar del Plata</option>
-        <option value="batan">Batán</option>
-        <option value="otra">Otra</option>
-      </select>
-    </div>
+        <div class="form-group">
+          <label for="phone">Teléfono (opcional)</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
 
-    <div class="form-group">
-      <label for="comments">Comentarios o aportes (opcional)</label>
-      <textarea id="comments" name="comments" rows="3" placeholder="¿Qué te gustaría aportar al encuentro?"></textarea>
-    </div>
+        <div class="form-group">
+          <label for="role">Tu rol en la comunidad educativa *</label>
+          <select id="role" name="role" required>
+            <option value="">Seleccioná una opción</option>
+            <option value="docente">Docente</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="directivo">Directivo</option>
+            <option value="auxiliar">Auxiliar</option>
+            <option value="familia">Familia</option>
+            <option value="organizacion">Organización social o política</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
 
-    <button type="submit" class="btn-register">
-      ✅ Confirmar Asistencia
-    </button>
-  </form>
-</section>
+        <div class="form-group">
+          <label for="localidad">Localidad *</label>
+          <select id="localidad" name="localidad" required>
+            <option value="">Seleccioná una opción</option>
+            <option value="mar-del-plata">Mar del Plata</option>
+            <option value="batan">Batán</option>
+            <option value="otra">Otra</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Comentarios o aportes (opcional)</label>
+          <textarea id="comments" name="comments" rows="3" placeholder="¿Qué te gustaría aportar al encuentro?"></textarea>
+        </div>
+
+        <button type="submit" class="btn-register">
+          ✅ Confirmar Asistencia
+        </button>
+
+        <!-- Redirección automática después del envío -->
+        <input type="hidden" name="_next" value="https://tu-pagina.vercel.app?gracias=1">
+      </form>
+    </section>
+
+    <!-- Sección del documento (basado en el PDF) -->
+    <section class="document-section">
+      <h2>Encuentro de Educación Distrital</h2>
+      <p class="subtitle">La escuela bonaerense en clave de transformación</p>
+
+      <div class="document-content">
+        <p><strong>El sábado 26 de abril de 2025</strong> se desarrolló en ADUM (Agremiación Docente Universitaria Marplatense) el <em>Encuentro de Educación Distrital de General Pueyrredon</em>, bajo la consigna <strong>"La escuela en clave de transformación"</strong>. Participaron más de 200 personas: estudiantes, auxiliares, docentes, directivos, supervisores, consejeros escolares y miembros de las comunidades educativas.</p>
+
+        <p>También participaron representantes de los gremios de los trabajadores de la educación, salud y justicia, centrales de los trabajadores, el consejo local de niñez y adolescencia, y organizaciones políticas y sociales.</p>
+
+        <h3>La escuela como garante de derechos</h3>
+        <p>La comisión destacó la importancia de construir una red entre la escuela y la comunidad educativa. Se reconoce que la escuela no puede resolver los problemas en soledad, sino que necesita la participación activa de todos los actores sociales. Se propone fortalecer las políticas públicas provinciales, como el Servicio Zonal de Promoción y Protección de Derechos de Niños, Niñas y Adolescentes.</p>
+        <p>Se plantea crear espacios de escucha barrial y que la escuela acompañe en la resolución de conflictos. Además, se destaca la necesidad de que la información oficial (resoluciones, comunicados) llegue a cada docente de forma clara y completa.</p>
+        <p>Entre las propuestas: fortalecer la <strong>Educación Sexual Integral (ESI)</strong>, diseñar un entramado para prevenir el abuso sexual (especialmente en el nivel inicial) y posicionar a la escuela como referente para combatir el trabajo infantil.</p>
+
+        <h3>Educación, Trabajo y Producción</h3>
+        <p>Se propone acompañar a los estudiantes en la planificación de un proyecto de vida, orientándolos en formación y capacitación. Articular con sindicatos, cámaras empresariales y la UNMDP para identificar necesidades formativas reales.</p>
+        <p>Replicar las prácticas profesionalizantes de las escuelas técnicas en otras modalidades. Adecuar los horarios de los CFP a las necesidades de la comunidad.</p>
+        <p>Incluir orientación laboral desde los niveles iniciales y profundizar contenidos sobre derechos laborales. Generar espacios formativos significativos que recuperen el valor simbólico del trabajo frente a alternativas como criptomonedas o juegos online.</p>
+
+        <h3>La escuela como espacio democrático y dinamizadora comunitaria</h3>
+        <p>Es fundamental fortalecer prácticas democráticas: <strong>Centros de Estudiantes</strong>, <strong>Consejos de Aula</strong> y participación estudiantil real. Se reconoce que, si bien hay apoyo, su implementación sigue siendo limitada.</p>
+        <p>Se propone una <strong>escuela de puertas abiertas</strong>, vinculada con las problemáticas barriales. Las cooperadoras escolares son un eje clave de vinculación comunitaria. Se recomienda su participación en jornadas institucionales para fortalecer el diálogo y el reconocimiento.</p>
+        <p>Se enfatiza la necesidad de un diálogo interinstitucional real entre la escuela y los actores locales.</p>
+
+        <p class="quote"><em>"La escuela no se toca. La escuela se organiza con la comunidad."</em></p>
+      </div>
+    </section>
+
+    <!-- Botón de descarga del PDF -->
+    <a href="MDF-%20MDP%20BAT%C3%81N%20DOCUMENTO.pdf" 
+       class="btn-download" 
+       download="Documento_Completo_MDF_Educacion.pdf">
+      📥 Descargar el documento completo
+    </a>
+
+    <!-- Enlaces importantes -->
+    <section class="links">
+      <h2>Enlaces</h2>
+      <a href="https://instagram.com/mdf.oficial" class="btn" target="_blank">Instagram</a>
+      <a href="https://facebook.com/mdf.oficial" class="btn" target="_blank">Facebook</a>
+      <a href="https://twitter.com/mdf_oficial" class="btn" target="_blank">Twitter</a>
+      <a href="https://mdf.org.ar" class="btn" target="_blank">Sitio Web</a>
+      <a href="mailto:contacto@mdf.org.ar" class="btn">Contacto</a>
+    </section>
+  </div>
+
+  <!-- Script: mensaje de agradecimiento tras envío -->
+  <script>
+    if (window.location.search.includes("gracias=1")) {
+      alert("¡Gracias por registrarte! Tu asistencia ha sido confirmada.");
+      window.history.replaceState(null, null, window.location.pathname);
+    }
+  </script>
+</body>
+</html>
