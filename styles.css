@@ -1,10 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Animación suave y lenta de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fondo degradado diagonal: blanco → gris claro */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffffff 0%, #f4f4f4 100%);
+  color: #333;
+  min-height: 100vh;
+  padding: 60px 20px;
+  line-height: 1.6;
+}
+
+/* Contenedor: sin tarjeta, sin fondo blanco, sin sombra */
+.container {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  width: 180px;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  animation: fadeIn 1.3s ease-out 0.4s forwards;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+  transition: transform 0.4s ease;
+}
+
+/* Títulos */
+.header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a5fb4;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 1.3s ease-out 0.6s forwards;
+}
+
+.header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeIn 1.3s ease-out 0.9s forwards;
+}
+
+.location {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+  font-style: italic;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeIn 1.3s ease-out 1.2s forwards;
+}
+
+/* Banner del evento */
+.banner {
+  margin: 25px 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  animation: fadeIn 1.4s ease-out 1.5s forwards;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Botón 1: Registro de Asistencia */
+.btn-register {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  margin: 24px 0;
+  background: linear-gradient(to right, #1a5fb4, #2a7fd9);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(26, 95, 180, 0.15);
+  opacity: 0;
+  animation: fadeIn 1.3s ease-out 1.8s forwards;
+}
+
+.btn-register:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(26, 95, 180, 0.25);
+  background: linear-gradient(to right, #164d96, #266eb2);
+}
+
+/* Botón 2: Inscripción al Dispositivo de Fiscalización */
+.btn-fiscalizacion {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  margin: 24px 0;
+  background: linear-gradient(to right, #2c3e50, #3e5a7a);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(44, 62, 80, 0.15);
+  opacity: 0;
+  animation: fadeIn 1.3s ease-out 2.2s forwards;
+}
+
+.btn-fiscalizacion:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(44, 62, 80, 0.25);
+  background: linear-gradient(to right, #1a252f, #2c3e50);
+}
+
+/* Botón de descarga del PDF */
+.btn-download {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin: 24px 0;
+  background: linear-gradient(to right, #555, #777);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out 2.6s forwards;
+  text-align: center;
+}
+
+.btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, #444, #666);
+}
+
 /* Sección del documento */
 .document-section {
   margin: 40px 0 30px;
   text-align: left;
   color: #444;
   opacity: 0;
-  animation: fadeIn 1.3s ease-out 4.2s forwards;
+  animation: fadeIn 1.3s ease-out 3.0s forwards;
 }
 
 .document-section h2 {
@@ -51,27 +229,107 @@
   font-weight: 600;
 }
 
-/* Botón de descarga */
-.btn-download {
+/* Sección de enlaces */
+.links {
+  margin-top: 40px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.3s ease-out 3.4s forwards;
+}
+
+.links h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.links h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #1a5fb4;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Enlaces */
+.btn {
   display: block;
   width: 100%;
-  padding: 16px;
-  margin: 24px 0;
-  background: linear-gradient(to right, #555, #777);
-  color: white;
+  padding: 15px;
+  margin-bottom: 12px;
+  background-color: #fdfdfd;
+  color: #2c3e50;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 10px;
   font-size: 16px;
   font-weight: 600;
   transition: all 0.4s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8e8e8;
   opacity: 0;
-  animation: fadeIn 1.2s ease-out 4.0s forwards;
-  text-align: center;
 }
 
-.btn-download:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(to right, #444, #666);
+/* Animación escalonada para enlaces */
+.links .btn:nth-child(2) { animation: fadeIn 1.2s ease-out 3.6s forwards; }
+.links .btn:nth-child(3) { animation: fadeIn 1.2s ease-out 3.8s forwards; }
+.links .btn:nth-child(4) { animation: fadeIn 1.2s ease-out 4.0s forwards; }
+.links .btn:nth-child(5) { animation: fadeIn 1.2s ease-out 4.2s forwards; }
+.links .btn:nth-child(6) { animation: fadeIn 1.2s ease-out 4.4s forwards; }
+
+.btn:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-color: #1a5fb4;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+
+  .location {
+    font-size: 15px;
+  }
+
+  .banner img {
+    max-height: 400px;
+    border-radius: 10px;
+  }
+
+  .btn-register,
+  .btn-fiscalizacion,
+  .btn-download {
+    font-size: 16px;
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .document-content {
+    font-size: 14px;
+    padding: 16px;
+  }
+
+  .links .btn {
+    font-size: 15px;
+    padding: 14px;
+    border-radius: 8px;
+  }
 }
