@@ -1,4 +1,44 @@
-/* Imagen destacada del evento - CORREGIDA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo del movimiento */
+.logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Banner destacado del evento - CORREGIDO Y CENTRADO */
 .banner {
   margin-bottom: 25px;
   overflow: hidden;
@@ -13,7 +53,104 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  display: block;
-  object-fit: cover;
+  max-height: 400px; /* Limita la altura para no ocupar demasiado */
+  object-fit: cover; /* Mantiene proporción y recorta suavemente si es necesario */
   border-radius: 15px;
+  display: block;
+}
+
+/* Botón 1: Registro de Asistencia */
+.btn-register {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  margin: 20px 0;
+  background-color: #2ecc71; /* Verde */
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+}
+
+.btn-register:hover {
+  background-color: #27ae60;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(46, 204, 113, 0.4);
+}
+
+/* Botón 2: Inscripción al Dispositivo de Fiscalización */
+.btn-fiscalizacion {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  margin: 20px 0;
+  background-color: #3498db; /* Azul profesional */
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.btn-fiscalizacion:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Enlaces normales */
+.links h2 {
+  font-size: 22px;
+  margin: 30px 0 20px;
+  color: #555;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 12px;
+  background-color: #6a5acd; /* Morado */
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5a4abc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(106, 87, 205, 0.2);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 480px) {
+  .container {
+    padding: 25px 20px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .btn-register,
+  .btn-fiscalizacion {
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+
+  .banner img {
+    max-height: 320px; /* Ajuste en pantallas pequeñas */
+  }
 }
