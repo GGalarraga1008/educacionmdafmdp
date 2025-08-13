@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* Animación suave y lenta de aparición */
+/* Animación suave y lenta */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -16,7 +16,7 @@
   }
 }
 
-/* Fondo degradado diagonal: blanco → gris claro */
+/* Fondo degradado: blanco → gris claro */
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #ffffff 0%, #f4f4f4 100%);
@@ -26,7 +26,7 @@ body {
   line-height: 1.6;
 }
 
-/* Contenedor: sin tarjeta, sin fondo blanco, sin sombra */
+/* Contenedor sin tarjeta flotante */
 .container {
   max-width: 680px;
   width: 100%;
@@ -84,7 +84,7 @@ body {
   animation: fadeIn 1.3s ease-out 1.2s forwards;
 }
 
-/* Banner del evento */
+/* Banner */
 .banner {
   margin: 25px 0;
   overflow: hidden;
@@ -127,7 +127,7 @@ body {
   background: linear-gradient(to right, #164d96, #266eb2);
 }
 
-/* Botón 2: Inscripción al Dispositivo de Fiscalización */
+/* Botón 2: Fiscalización */
 .btn-fiscalizacion {
   display: block;
   width: 100%;
@@ -151,38 +151,13 @@ body {
   background: linear-gradient(to right, #1a252f, #2c3e50);
 }
 
-/* Botón de descarga del PDF */
-.btn-download {
-  display: block;
-  width: 100%;
-  padding: 16px;
-  margin: 24px 0;
-  background: linear-gradient(to right, #555, #777);
-  color: white;
-  text-decoration: none;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all 0.4s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeIn 1.2s ease-out 2.6s forwards;
-  text-align: center;
-}
-
-.btn-download:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(to right, #444, #666);
-}
-
 /* Sección del documento */
 .document-section {
-  margin: 40px 0 30px;
+  margin: 40px 0 20px;
   text-align: left;
   color: #444;
   opacity: 0;
-  animation: fadeIn 1.3s ease-out 3.0s forwards;
+  animation: fadeIn 1.3s ease-out 2.6s forwards;
 }
 
 .document-section h2 {
@@ -215,18 +190,43 @@ body {
   margin: 18px 0 10px;
 }
 
-.document-content ul {
-  margin: 10px 0 15px 20px;
-  line-height: 1.6;
-}
-
 .document-content p {
   margin-bottom: 14px;
 }
 
-.document-content em {
+.document-content .quote {
+  text-align: center;
+  font-style: italic;
   color: #1a5fb4;
   font-weight: 600;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Botón de descarga */
+.btn-download {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin: 30px 0;
+  background: linear-gradient(to right, #555, #777);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out 3.0s forwards;
+  text-align: center;
+}
+
+.btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, #444, #666);
 }
 
 /* Sección de enlaces */
@@ -273,7 +273,6 @@ body {
   opacity: 0;
 }
 
-/* Animación escalonada para enlaces */
 .links .btn:nth-child(2) { animation: fadeIn 1.2s ease-out 3.6s forwards; }
 .links .btn:nth-child(3) { animation: fadeIn 1.2s ease-out 3.8s forwards; }
 .links .btn:nth-child(4) { animation: fadeIn 1.2s ease-out 4.0s forwards; }
